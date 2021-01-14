@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Algorithms.cpp" />
     <ClCompile Include="isValidSubsequence.cpp" />
+    <ClCompile Include="threeNumberSum.cpp" />
     <ClCompile Include="twoNumberSum.cpp" />
   </ItemGroup>
   <ItemGroup>
