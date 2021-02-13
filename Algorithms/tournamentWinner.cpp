@@ -39,6 +39,8 @@ string tournamentWinner(vector<vector<string>> competitions,
             }
         } else {
             pointsTable.insert(pair<string, int>(roundWinner, 3));
+            if (finalWinner == "")
+							 finalWinner = roundWinner;
         }
     }
 
