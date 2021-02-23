@@ -140,12 +140,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Algorithms.cpp" />
+    <ClCompile Include="balancedBrackets.cpp" />
+    <ClCompile Include="Node.cpp" />
     <ClCompile Include="isValidSubsequence.cpp" />
+    <ClCompile Include="minWaitingTime.cpp" />
+    <ClCompile Include="moveElementToEnd.cpp" />
+    <ClCompile Include="reverseWordsInString.cpp" />
+    <ClCompile Include="smallestDifference.cpp" />
     <ClCompile Include="threeNumberSum.cpp" />
+    <ClCompile Include="tournamentWinner.cpp" />
     <ClCompile Include="twoNumberSum.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithms.h" />
+    <ClInclude Include="Node.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

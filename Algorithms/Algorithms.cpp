@@ -3,16 +3,28 @@
 
 #include <iostream>
 #include "algorithms.h"
+#include "Node.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
-
+    
+    
 
     //twoNumberSum({ 3, 5, -4, 8, 11, 1, -1, 6 }, 10);
     //isValidSubsequence({ 5, 1, 22, 25, 6, -1, 8, 10 }, { 1, 6, -1, 10 });
-    threeNumberSum({ 12, 3, 1, 2, -6, 5, -8, 6 }, 0);
-  
+    //threeNumberSum({ 12, 3, 1, 2, -6, 5, -8, 6 }, 0);
+    
+
+    // Create graph for DFS
+    Node graph("A");
+    graph.addChild("B")->addChild("C")->addChild("D");
+    graph.children[0]->addChild("E")->addChild("F");
+    graph.children[2]->addChild("G")->addChild("H");
+    graph.children[0]->children[1]->addChild("I")->addChild("J");
+    graph.children[2]->children[0]->addChild("K");
+    vector<string> inputArray{};
+    graph.depthFirstSearch(&inputArray);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
