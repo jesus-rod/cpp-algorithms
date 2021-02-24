@@ -146,6 +146,7 @@
     <ClCompile Include="minWaitingTime.cpp" />
     <ClCompile Include="moveElementToEnd.cpp" />
     <ClCompile Include="reverseWordsInString.cpp" />
+    <ClCompile Include="riverSizes.cpp" />
     <ClCompile Include="smallestDifference.cpp" />
     <ClCompile Include="threeNumberSum.cpp" />
     <ClCompile Include="tournamentWinner.cpp" />
