@@ -146,6 +146,7 @@
     <ClCompile Include="isValidSubsequence.cpp" />
     <ClCompile Include="minWaitingTime.cpp" />
     <ClCompile Include="moveElementToEnd.cpp" />
+    <ClCompile Include="RemoveIslands.cpp" />
     <ClCompile Include="reverseWordsInString.cpp" />
     <ClCompile Include="riverSizes.cpp" />
     <ClCompile Include="smallestDifference.cpp" />

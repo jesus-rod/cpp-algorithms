@@ -21,9 +21,8 @@ vector<string> Node::breadthFirstSearch(vector<string>* array) {
         Node current = *queue.front();
         queue.pop_front();
         array->push_back(current.name);
-        for (Node* child : current.children) {
+        for (Node* child : current.children)
             queue.push_back(child);
-        }
     }
     return *array;
 }
