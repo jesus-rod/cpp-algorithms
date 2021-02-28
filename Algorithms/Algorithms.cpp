@@ -4,10 +4,21 @@
 #include <iostream>
 #include "algorithms.h"
 #include "Node.h"
+#include "AncestralTree.h"
+#include <unordered_map>
+
+unordered_map<char, AncestralTree*> getAncestralTrees() {
+    unordered_map<char, AncestralTree*> trees;
+    string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    for (char a : alphabet) {
+        trees.insert({ a, new AncestralTree(a) });
+    }
+    return trees;
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "Algorithmssss!\n";
     
     
 
@@ -25,10 +36,19 @@ int main()
     graph.children[2]->children[0]->addChild("K");
     vector<string> inputArray{};
     graph.depthFirstSearch(&inputArray);*/
-    auto output = riverSizes({ { 1, 0, 0, 1, 0 }, { 1, 0, 1, 0, 0 }, { 0, 0, 1, 0, 1 },
-        { 1, 0, 1, 0, 1 }, { 1, 0, 1, 1, 0 } });
-    
+    /*auto output = riverSizes({ { 1, 0, 0, 1, 0 }, { 1, 0, 1, 0, 0 }, { 0, 0, 1, 0, 1 },
+        { 1, 0, 1, 0, 1 }, { 1, 0, 1, 1, 0 } });*/
 
+ 
+    //Build ancestral tree
+    auto trees = getAncestralTrees();
+    trees.at('A')->addAsAncestor({ trees.at('B'), trees.at('C') });
+    trees.at('B')->addAsAncestor({ trees.at('D'), trees.at('E') });
+    trees.at('D')->addAsAncestor({ trees.at('H'), trees.at('I') });
+    trees.at('C')->addAsAncestor({ trees.at('F'), trees.at('G') });
+
+    AncestralTree* youngestCommon = getYoungestCommonAncestor(trees.at('A'), trees.at('E'), trees.at('I'));
+    cout << "youngestCommon is: " << youngestCommon->name;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
