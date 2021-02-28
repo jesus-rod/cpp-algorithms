@@ -11,6 +11,7 @@ public:
     Node(string str) { name = str; }
 
     vector<string> depthFirstSearch(vector<string>* array);
+    vector<string> breadthFirstSearch(vector<string>* array);
 
     Node* addChild(string name);
 };
